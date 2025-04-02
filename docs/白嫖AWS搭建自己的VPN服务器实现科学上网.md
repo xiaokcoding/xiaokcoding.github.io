@@ -63,9 +63,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/956bf85bbac9
 
 ## 客户端
 
-Windows（v2rayN）：https://github.com/2dust/v2rayN/releases/tag/7.10.5
-Android（v2rayNG）：https://github.com/2dust/v2rayNG/releases/tag/1.9.45
-IOS（shadowrocket）：http://apps.apple.com/us/app/shadowrocket/id932747118
+[Windows（v2rayN）](https://github.com/2dust/v2rayN/releases/tag/7.10.5)，[Android（v2rayNG）](https://github.com/2dust/v2rayNG/releases/tag/1.9.45)，[IOS（shadowrocket）](http://apps.apple.com/us/app/shadowrocket/id932747118)
 
 ## vmess+ws
 
