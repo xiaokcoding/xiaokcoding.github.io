@@ -1,9 +1,6 @@
 由于香橙派官方送了本人一块orangepi Aipro开发板，本来想的是用这块板子当博客的服务器，折腾了半天也没弄好，就去搜了搜这东西还能干啥，看了一圈脑子里突然想能不能搭个vpn服务器，最近用的节点又贵又卡，真受不了。搜了一圈我选择白嫖AWS(AWS为每个用户提供了每月750小时的运行实例时间，持续12个月)部署vpn，至于这块板子能不能弄，恕在下学识浅薄，回答不了！
 
 **前期准备：一张visa卡（淘宝咸鱼，问清楚支不支持AWS）**
-
-出了问题看看自己是不是管理员`sudo -i`
-
 ## 配置云服务器
 
 控制台主页–>所有服务–>EC2–>启用实例(右上角可以选择地区，我选的东京)，操作系统选Ubuntu，密钥对（登录）–>点击右边创建密钥对，创建好会自动下载到本地，ssh连接需要
@@ -35,8 +32,8 @@ ssh -i "上边你的密钥对的下载位置" ubuntu@你的公有ipv4DNS
 把刚刚复制的id_rsa.pub，复制到`./.ssh/authorized_keys`里面
 
 ~~~shell
- sudo -i
- vim ./.ssh/authorized_keys 
+sudo -i
+vim ./.ssh/authorized_keys 
 ~~~
 
 打开config，添加以下内容，保存之后就可以通过`ssh aws`进行连接了
@@ -123,16 +120,13 @@ curl https://get.acme.sh | sh; apt install socat -y || yum install socat -y; ~/.
 
 ~~~shell
 sudo -i
- x-ui
- 7. 查看当前面板信息
+x-ui
+7. 查看当前面板信息
 ~~~
 
 **安装证书老失败**
 
 `sudo -i`切换到管理员，一切都解决了
-
-
-
 ## 参考
 
 1. [DeepSeek](https://chat.deepseek.com/)
