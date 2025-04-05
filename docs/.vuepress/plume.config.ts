@@ -1,6 +1,6 @@
 import { defineThemeConfig } from 'vuepress-theme-plume'
-import { enNavbar, zhNavbar } from './navbar'
-import { enNotes, zhNotes } from './notes'
+import { zhNavbar } from './navbar'
+import { zhNotes } from './notes'
 
 /**
  * @see https://theme-plume.vuejs.press/config/basic/

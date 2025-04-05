@@ -1,7 +1,5 @@
 import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
 
-/* =================== locale: zh-CN ======================= */
-
 const Cpp = defineNoteConfig({
   dir: 'Cpp',
   link: '/Cpp/',
