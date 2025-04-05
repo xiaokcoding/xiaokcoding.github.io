@@ -11,11 +11,6 @@ export default defineUserConfig({
       lang: 'zh-CN',
       description: '',
     },
-    '/en/': {
-      title: 'My Vuepress Site',
-      lang: 'en-US',
-      description: '',
-    },
   },
 
   head: [

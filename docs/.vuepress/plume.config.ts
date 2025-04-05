@@ -68,32 +68,5 @@ export default defineThemeConfig({
       //   content: '',
       // },
     },
-    '/en/': {
-      /**
-       * @see https://theme-plume.vuejs.press/config/basic/#profile
-       */
-      profile: {
-        avatar: 'https://theme-plume.vuejs.press/plume.png',
-        name: 'My Vuepress Site',
-        description: '',
-        // circle: true,
-        // location: '',
-        // organization: '',
-      },
-
-      navbar: enNavbar,
-      notes: enNotes,
-
-      /**
-       * 公告板
-       * @see https://theme-plume.vuejs.press/guide/features/bulletin/
-       */
-      // bulletin: {
-      //   layout: 'top-right',
-      //   contentType: 'markdown',
-      //   title: '',
-      //   content: '',
-      // },
-    },
   },
 })
