@@ -89,7 +89,8 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
      */
     codeHighlighter: {
-      twoslash: true, // 启用 twoslash
+      themes: { light: 'vitesse-light', dark: 'vitesse-dark' },
+      //twoslash: true, // 启用 twoslash
       whitespace: true, // 启用 空格/Tab 高亮
       lineNumbers: true, // 启用行号
     },
@@ -115,14 +116,14 @@ export default defineUserConfig({
       codepen: true,      // 启用嵌入 codepen 语法 @[codepen](user/slash)
       replit: true,       // 启用嵌入 replit 语法 @[replit](user/repl-name)
       codeSandbox: true,  // 启用嵌入 codeSandbox 语法 @[codeSandbox](id)
-      jsfiddle: true,     // 启用嵌入 jsfiddle 语法 @[jsfiddle](user/id)
+      //jsfiddle: true,     // 启用嵌入 jsfiddle 语法 @[jsfiddle](user/id)
       npmTo: true,        // 启用 npm-to 容器  ::: npm-to
       demo: true,         // 启用 demo 容器  ::: demo
-      repl: {             // 启用 代码演示容器
-        go: true,         // ::: go-repl
-        rust: true,       // ::: rust-repl
-        kotlin: true,     // ::: kotlin-repl
-      },
+      //repl: {             // 启用 代码演示容器
+      //  go: true,         // ::: go-repl
+      //  rust: true,       // ::: rust-repl
+      //  kotlin: true,     // ::: kotlin-repl
+      //},
       math: {             // 启用数学公式
         type: 'katex',
       },
@@ -150,9 +151,10 @@ export default defineUserConfig({
      * 评论 comments
      * @see https://theme-plume.vuejs.press/guide/features/comments/
      */
-    // comment: {
-    //   provider: '', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
-    //   comment: true,
+     comment: {
+       provider: 'Waline', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
+       serverURL: 'https://comment.xiaokcoding.top' ,
+       comment: true,
     //   repo: '',
     //   repoId: '',
     //   category: '',
@@ -160,7 +162,7 @@ export default defineUserConfig({
     //   mapping: 'pathname',
     //   reactionsEnabled: true,
     //   inputPosition: 'top',
-    // },
+     },
 
     /**
      * 加密功能
