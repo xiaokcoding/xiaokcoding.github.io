@@ -2,7 +2,7 @@ import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
 
 const Cpp = defineNoteConfig({
   dir: 'Cpp',
-  link: '/notes/Cpp/',
+  link: '/Cpp/',
   sidebar: [
     '',  // 对应README.md
     '01 _ 初识C++「C++基础」',

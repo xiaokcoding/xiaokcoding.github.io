@@ -7,7 +7,7 @@ export const zhNavbar = defineNavbarConfig([
   //{ text: '归档', link: '/blog/archives/' },
   {
     text: '系列文章',
-    items: [{ text: 'Cpp', link: '/notes/Cpp/README.md', icon: 'simple-icons:cplusplus' }]
+    items: [{ text: 'Cpp', link: '/Cpp/', icon: 'simple-icons:cplusplus' }]
   },
   {
     text: '更多',
