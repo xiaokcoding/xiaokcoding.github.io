@@ -1,5 +1,5 @@
 ---
-title: 18 _ variant「C++基础」
+title: variant
 createTime: 2025/04/06 16:52:26
 permalink: /Cpp/x8ww6jdo/
 ---

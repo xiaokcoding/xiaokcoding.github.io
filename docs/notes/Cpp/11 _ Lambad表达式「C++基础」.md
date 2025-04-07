@@ -1,5 +1,5 @@
 ---
-title: 11 _ Lambad表达式「C++基础」
+title: Lambad表达式
 createTime: 2025/04/06 16:52:25
 permalink: /Cpp/rmi0zobo/
 ---

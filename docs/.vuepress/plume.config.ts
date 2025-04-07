@@ -47,7 +47,7 @@ export default defineThemeConfig({
        */
       profile: {
         avatar: 'https://xiaokcoding-image.oss-cn-beijing.aliyuncs.com/20250405201125129.jpg',
-        name: 'xiaokcoding',
+        name: 'XiaokCoding',
         description: '凡事有交代，件件有着落，事事有回音',
         circle: true,
         location: 'TaiYuan, China',

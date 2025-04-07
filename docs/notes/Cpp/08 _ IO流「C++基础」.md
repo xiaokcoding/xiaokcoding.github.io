@@ -1,5 +1,5 @@
 ---
-title: 08 _ IO流「C++基础」
+title: IO流
 createTime: 2025/04/06 16:52:25
 permalink: /Cpp/6f4h6p47/
 ---

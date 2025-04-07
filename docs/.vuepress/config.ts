@@ -7,7 +7,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   locales: {
     '/': {
-      title: 'My Vuepress Site',
+      title: 'XiaokCoding',
       lang: 'zh-CN',
       description: '',
     },
@@ -15,7 +15,7 @@ export default defineUserConfig({
 
   head: [
     // 配置站点图标
-    ['link', { rel: 'icon', type: 'image/png', href: 'https://theme-plume.vuejs.press/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: 'https://xiaokcoding-image.oss-cn-beijing.aliyuncs.com/20250405201125129.jpg' }],
   ],
 
   bundler: viteBundler(),
@@ -151,17 +151,17 @@ export default defineUserConfig({
      * 评论 comments
      * @see https://theme-plume.vuejs.press/guide/features/comments/
      */
-     comment: {
-       provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
-       comment: true,
-       repo: 'xiaokcoding/BlogGiscus',
-       repoId: 'R_kgDOOVHSuQ',
-       category: 'Announcements',
-       categoryId: 'DIC_kwDOOVHSuc4Co1_g',
-       mapping: 'pathname',
-       reactionsEnabled: true,
-       inputPosition: 'top',
-     },
+    comment: {
+      provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
+      comment: true,
+      repo: 'xiaokcoding/BlogGiscus',
+      repoId: 'R_kgDOOVHSuQ',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOOVHSuc4Co1_g',
+      mapping: 'pathname',
+      reactionsEnabled: true,
+      inputPosition: 'top',
+    },
 
     /**
      * 加密功能
