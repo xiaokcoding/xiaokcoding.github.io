@@ -152,16 +152,15 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/guide/features/comments/
      */
      comment: {
-       provider: 'Waline', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
-       serverURL: 'https://comment.xiaokcoding.top' ,
+       provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
        comment: true,
-    //   repo: '',
-    //   repoId: '',
-    //   category: '',
-    //   categoryId: '',
-    //   mapping: 'pathname',
-    //   reactionsEnabled: true,
-    //   inputPosition: 'top',
+       repo: 'xiaokcoding/BlogGiscus',
+       repoId: 'R_kgDOOVHSuQ',
+       category: 'Announcements',
+       categoryId: 'DIC_kwDOOVHSuc4Co1_g',
+       mapping: 'pathname',
+       reactionsEnabled: true,
+       inputPosition: 'top',
      },
 
     /**
