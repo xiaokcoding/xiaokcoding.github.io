@@ -67,6 +67,6 @@ export default defineThemeConfig({
       //   title: '',
       //   content: '',
       // },
-    },
+    }
   },
 })
