@@ -39,5 +39,10 @@
     "hls.js": "^1.6.1",
     "mermaid": "^11.6.0",
     "mpegts.js": "^1.8.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "webworkify-webpack": "https://github.com/xqq/webworkify-webpack.git"
+    }
   }
 }
