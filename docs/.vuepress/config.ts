@@ -89,7 +89,7 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
      */
     codeHighlighter: {
-      themes: { light: 'vitesse-dark', dark: 'vitesse-dark' },
+      themes: { light: 'vitesse-light', dark: 'vitesse-dark' },
       notationDiff: true,
       notationErrorLevel: true,
       notationFocus: true,

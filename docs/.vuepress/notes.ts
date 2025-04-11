@@ -7,7 +7,7 @@ const Cpp = defineNoteConfig({
 })
 
 export const zhNotes = defineNotesConfig({
-  dir: 'notes',
+  dir: '/notes/',
   link: '/',
   notes: [Cpp]
 })
