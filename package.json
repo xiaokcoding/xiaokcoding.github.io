@@ -17,6 +17,7 @@
     "vp-update": "pnpm dlx vp-update"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.3.0",
     "@types/express": "^5.0.1",
     "@vuepress/bundler-vite": "2.0.0-rc.20",
     "@vuepress/shiki-twoslash": "2.0.0-rc.91",

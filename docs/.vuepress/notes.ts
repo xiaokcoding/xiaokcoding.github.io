@@ -6,8 +6,26 @@ const Cpp = defineNoteConfig({
   sidebar:'auto'
 })
 
+const algorithms = defineNoteConfig({
+  dir: 'algorithms',
+  link: '/algorithms/',
+  sidebar: 'auto'
+})
+
+const Liunx = defineNoteConfig({
+  dir: 'Liunx',
+  link: '/Liunx/',
+  sidebar: 'auto'
+})
+
+const network = defineNoteConfig({
+  dir: '计算机网络',
+  link: '/network/',
+  sidebar: 'auto'
+})
+
 export const zhNotes = defineNotesConfig({
   dir: '/notes/',
   link: '/',
-  notes: [Cpp]
+  notes: [Cpp, algorithms, Liunx, network]
 })
