@@ -26,7 +26,7 @@ export const zhNavbar = defineNavbarConfig([
       },
       {
         text: 'Linux',
-        link: '/Linux/',
+        link: '/Liunx/',
         icon: 'mdi:linux'
       },
       {
