@@ -19,21 +19,21 @@
   <meta name="author" content="xiaokcoding">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1. ssh-keygen — 生成 SSH 密钥对功能生成用于公钥认证的密钥对（私钥 + 公钥）。 基本语法1ssh-keygen [-t type] [-b bits] [-C comment] [-f filename]  常用参数   参数 说明    -t type 密钥类型：ed25519（推荐）、rsa、ecdsa   -b bits 密钥长度（仅 RSA 有效，建议 ≥4096）">
+    <meta name="description" content="1. 获取公网ipcurl cip.cc 2. PowerShell设置curl代理123456$env:http_proxy &#x3D; &quot;http:&#x2F;&#x2F;127.0.0.1:10808&quot; $env:https_proxy &#x3D; &quot;http:&#x2F;&#x2F;127.0.0.1:10808&quot;echo $env:http_proxy echo $env:https_proxy$env">
 <meta property="og:type" content="article">
-<meta property="og:title" content="远程连接服务器常用指令">
-<meta property="og:url" content="https://xiaokcoding.top/2025/11/22/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/index.html">
+<meta property="og:title" content="curl常用命令">
+<meta property="og:url" content="https://xiaokcoding.top/2025/11/22/curl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1. ssh-keygen — 生成 SSH 密钥对功能生成用于公钥认证的密钥对（私钥 + 公钥）。 基本语法1ssh-keygen [-t type] [-b bits] [-C comment] [-f filename]  常用参数   参数 说明    -t type 密钥类型：ed25519（推荐）、rsa、ecdsa   -b bits 密钥长度（仅 RSA 有效，建议 ≥4096）">
+<meta property="og:description" content="1. 获取公网ipcurl cip.cc 2. PowerShell设置curl代理123456$env:http_proxy &#x3D; &quot;http:&#x2F;&#x2F;127.0.0.1:10808&quot; $env:https_proxy &#x3D; &quot;http:&#x2F;&#x2F;127.0.0.1:10808&quot;echo $env:http_proxy echo $env:https_proxy$env">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-11-22T12:13:06.000Z">
-<meta property="article:modified_time" content="2025-11-22T12:28:05.169Z">
+<meta property="article:published_time" content="2025-11-22T14:26:42.000Z">
+<meta property="article:modified_time" content="2025-11-22T14:31:36.830Z">
 <meta property="article:author" content="xiaokcoding">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>远程连接服务器常用指令 - Hexo</title>
+  <title>curl常用命令 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="远程连接服务器常用指令"></span>
+            <span id="subtitle" data-typed-text="curl常用命令"></span>
           
         </div>
 
@@ -210,7 +210,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-11-22 20:13" pubdate>
+        <time datetime="2025-11-22 22:26" pubdate>
           2025年11月22日 晚上
         </time>
       </span>
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          330 字
+          45 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          3 分钟
+          1 分钟
         
       </span>
     
@@ -270,121 +270,13 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">远程连接服务器常用指令</h1>
+            <h1 id="seo-header">curl常用命令</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="1-ssh-keygen-—-生成-SSH-密钥对"><a href="#1-ssh-keygen-—-生成-SSH-密钥对" class="headerlink" title="1. ssh-keygen — 生成 SSH 密钥对"></a>1. <code>ssh-keygen</code> — 生成 SSH 密钥对</h2><h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>生成用于公钥认证的密钥对（私钥 + 公钥）。</p>
-<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen [-t <span class="hljs-built_in">type</span>] [-b bits] [-C comment] [-f filename]<br></code></pre></td></tr></table></figure>
-
-<h3 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-t type</code></td>
-<td>密钥类型：<code>ed25519</code>（推荐）、<code>rsa</code>、<code>ecdsa</code></td>
-</tr>
-<tr>
-<td><code>-b bits</code></td>
-<td>密钥长度（仅 RSA 有效，建议 ≥4096）</td>
-</tr>
-<tr>
-<td><code>-C comment</code></td>
-<td>注释（通常为邮箱）</td>
-</tr>
-<tr>
-<td><code>-f filename</code></td>
-<td>指定保存路径</td>
-</tr>
-<tr>
-<td><code>-N passphrase</code></td>
-<td>设置密钥密码（空值表示无密码）</td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t ed25519 -C <span class="hljs-string">&quot;admin@example.com&quot;</span><br>ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_backup -N <span class="hljs-string">&quot;&quot;</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="文件说明"><a href="#文件说明" class="headerlink" title="文件说明"></a>文件说明</h3><ul>
-<li>私钥：<code>id_ed25519</code>（权限应为 <code>600</code>）</li>
-<li>公钥：<code>id_ed25519.pub</code>（可公开）</li>
-</ul>
-<hr>
-<h2 id="2-ssh-copy-id-—-自动部署公钥"><a href="#2-ssh-copy-id-—-自动部署公钥" class="headerlink" title="2. ssh-copy-id — 自动部署公钥"></a>2. <code>ssh-copy-id</code> — 自动部署公钥</h2><h3 id="功能-1"><a href="#功能-1" class="headerlink" title="功能"></a>功能</h3><p>将本地公钥自动追加到远程主机的 <code>~/.ssh/authorized_keys</code>，实现免密登录。</p>
-<h3 id="基本语法-1"><a href="#基本语法-1" class="headerlink" title="基本语法"></a>基本语法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-copy-id [-i identity_file] [-p port] [user@]hostname<br></code></pre></td></tr></table></figure>
-
-<h3 id="常用参数-1"><a href="#常用参数-1" class="headerlink" title="常用参数"></a>常用参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-i identity_file</code></td>
-<td>指定 <strong>公钥文件</strong>（必须是 <code>.pub</code>）</td>
-</tr>
-<tr>
-<td><code>-p port</code></td>
-<td>指定 SSH 端口</td>
-</tr>
-<tr>
-<td><code>-n</code></td>
-<td>模拟运行（不实际写入）</td>
-</tr>
-<tr>
-<td><code>-f</code></td>
-<td>强制复制（即使已存在）</td>
-</tr>
-</tbody></table>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-copy-id alice@192.168.1.100<br>ssh-copy-id -i ~/.ssh/id_ed25519.pub -p 2222 user@server<br></code></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="3-SSH-配置文件-ssh-config"><a href="#3-SSH-配置文件-ssh-config" class="headerlink" title="3. SSH 配置文件 ~/.ssh/config"></a>3. SSH 配置文件 <code>~/.ssh/config</code></h2><h3 id="功能-2"><a href="#功能-2" class="headerlink" title="功能"></a>功能</h3><p>简化复杂连接，支持别名、跳板、密钥指定等。</p>
-<h3 id="示例配置"><a href="#示例配置" class="headerlink" title="示例配置"></a>示例配置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs conf">Host myprod<br>    HostName 203.0.113.10<br>    User deploy<br>    Port 2222<br>    IdentityFile ~/.ssh/prod_key<br>    IdentitiesOnly yes<br>    ServerAliveInterval 60<br><br>Host db<br>    HostName 10.0.1.5<br>    ProxyJump myprod<br></code></pre></td></tr></table></figure>
-
-<h3 id="常用配置项"><a href="#常用配置项" class="headerlink" title="常用配置项"></a>常用配置项</h3><table>
-<thead>
-<tr>
-<th>配置项</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>HostName</code></td>
-<td>实际 IP 或域名</td>
-</tr>
-<tr>
-<td><code>User</code></td>
-<td>用户名</td>
-</tr>
-<tr>
-<td><code>Port</code></td>
-<td>SSH 端口</td>
-</tr>
-<tr>
-<td><code>IdentityFile</code></td>
-<td>私钥路径</td>
-</tr>
-<tr>
-<td><code>IdentitiesOnly yes</code></td>
-<td>只使用指定密钥</td>
-</tr>
-<tr>
-<td><code>ProxyJump</code></td>
-<td>跳板机</td>
-</tr>
-<tr>
-<td><code>ServerAliveInterval</code></td>
-<td>心跳间隔（防超时）</td>
-</tr>
-</tbody></table>
-<p>使用：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh myprod<br>ssh db  <span class="hljs-comment"># 自动跳转</span><br></code></pre></td></tr></table></figure>
-
+                <h2 id="1-获取公网ip"><a href="#1-获取公网ip" class="headerlink" title="1. 获取公网ip"></a>1. 获取公网<code>ip</code></h2><p><code>curl cip.cc</code></p>
+<h2 id="2-PowerShell设置curl代理"><a href="#2-PowerShell设置curl代理" class="headerlink" title="2. PowerShell设置curl代理"></a>2. <code>PowerShell</code>设置<code>curl</code>代理</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">env</span>:http_proxy = <span class="hljs-string">&quot;http://127.0.0.1:10808&quot;</span></span> <br><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">env</span>:https_proxy = <span class="hljs-string">&quot;http://127.0.0.1:10808&quot;</span></span><br>echo $env:http_proxy <br>echo $env:https_proxy<br><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">env</span>:http_proxy = <span class="hljs-string">&quot;&quot;</span></span> <br><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">env</span>:https_proxy = <span class="hljs-string">&quot;&quot;</span></span><br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -401,8 +293,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>远程连接服务器常用指令</div>
-      <div>https://xiaokcoding.top/2025/11/22/远程连接服务器常用指令/</div>
+      <div>curl常用命令</div>
+      <div>https://xiaokcoding.top/2025/11/22/curl常用命令/</div>
     </div>
     <div class="license-meta">
       
@@ -446,18 +338,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/11/22/curl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="curl常用命令">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">curl常用命令</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/11/20/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2025/11/22/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="远程连接服务器常用指令">
+                        <span class="hidden-mobile">远程连接服务器常用指令</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

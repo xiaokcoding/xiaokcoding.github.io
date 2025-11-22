@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>curl常用命令</title>
+    <link href="/2025/11/22/curl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <url>/2025/11/22/curl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<h2 id="1-获取公网ip"><a href="#1-获取公网ip" class="headerlink" title="1. 获取公网ip"></a>1. 获取公网<code>ip</code></h2><p><code>curl cip.cc</code></p><h2 id="2-PowerShell设置curl代理"><a href="#2-PowerShell设置curl代理" class="headerlink" title="2. PowerShell设置curl代理"></a>2. <code>PowerShell</code>设置<code>curl</code>代理</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">env</span>:http_proxy = <span class="hljs-string">&quot;http://127.0.0.1:10808&quot;</span></span> <br><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">env</span>:https_proxy = <span class="hljs-string">&quot;http://127.0.0.1:10808&quot;</span></span><br>echo $env:http_proxy <br>echo $env:https_proxy<br><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">env</span>:http_proxy = <span class="hljs-string">&quot;&quot;</span></span> <br><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">env</span>:https_proxy = <span class="hljs-string">&quot;&quot;</span></span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>远程连接服务器常用指令</title>
     <link href="/2025/11/22/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
     <url>/2025/11/22/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
