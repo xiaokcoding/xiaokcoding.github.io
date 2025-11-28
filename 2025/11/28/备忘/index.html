@@ -19,21 +19,21 @@
   <meta name="author" content="xiaokcoding">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1. 设置 HTTP&#x2F;HTTPS 代理（全局）12345# HTTP 代理git config --global http.proxy http:&#x2F;&#x2F;127.0.0.1:10808# HTTPS 也走同一个代理（通常只需设 http.proxy，Git 会自动用于 HTTPS）git config --global https.proxy http:&#x2F;&#x2F;127.0.0.1:10808">
+    <meta name="description" content="CF优选【加速网站】分享几个我在用的CloudFlare优选IP及筛选方案 - VPS啦https:&#x2F;&#x2F;cf.090227.xyz&#x2F;https:&#x2F;&#x2F;vps789.com&#x2F;cfip&#x2F;?remarks&#x3D;domainhttps:&#x2F;&#x2F;ipdb.api.030101.xyz&#x2F;https:&#x2F;&#x2F;www.wetest.vip&#x2F;page&#x2F;cloudflare&#x2F;address_v4.htmlhttps:&#x2F;&#x2F;stock">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git设置代理">
-<meta property="og:url" content="https://xiaokcoding.top/2025/11/22/Git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/index.html">
+<meta property="og:title" content="CF优选">
+<meta property="og:url" content="https://xiaokcoding.top/2025/11/28/%E5%A4%87%E5%BF%98/index.html">
 <meta property="og:site_name" content="xiaokcoding">
-<meta property="og:description" content="1. 设置 HTTP&#x2F;HTTPS 代理（全局）12345# HTTP 代理git config --global http.proxy http:&#x2F;&#x2F;127.0.0.1:10808# HTTPS 也走同一个代理（通常只需设 http.proxy，Git 会自动用于 HTTPS）git config --global https.proxy http:&#x2F;&#x2F;127.0.0.1:10808">
+<meta property="og:description" content="CF优选【加速网站】分享几个我在用的CloudFlare优选IP及筛选方案 - VPS啦https:&#x2F;&#x2F;cf.090227.xyz&#x2F;https:&#x2F;&#x2F;vps789.com&#x2F;cfip&#x2F;?remarks&#x3D;domainhttps:&#x2F;&#x2F;ipdb.api.030101.xyz&#x2F;https:&#x2F;&#x2F;www.wetest.vip&#x2F;page&#x2F;cloudflare&#x2F;address_v4.htmlhttps:&#x2F;&#x2F;stock">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-11-22T14:48:14.000Z">
-<meta property="article:modified_time" content="2025-11-22T14:53:30.220Z">
+<meta property="article:published_time" content="2025-11-28T15:21:24.000Z">
+<meta property="article:modified_time" content="2025-11-28T15:38:15.699Z">
 <meta property="article:author" content="xiaokcoding">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Git设置代理 - xiaokcoding</title>
+  <title>CF优选 - xiaokcoding</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +211,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Git设置代理"></span>
+            <span id="subtitle" data-typed-text="CF优选"></span>
           
         </div>
 
@@ -222,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-11-22 22:48" pubdate>
-          2025年11月22日 晚上
+        <time datetime="2025-11-28 23:21" pubdate>
+          2025年11月28日 晚上
         </time>
       </span>
     
@@ -234,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          166 字
+          192 字
         
       </span>
     
@@ -282,26 +282,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Git设置代理</h1>
+            <h1 id="seo-header">CF优选</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="1-设置-HTTP-HTTPS-代理（全局）"><a href="#1-设置-HTTP-HTTPS-代理（全局）" class="headerlink" title="1. 设置 HTTP&#x2F;HTTPS 代理（全局）"></a>1. 设置 HTTP&#x2F;HTTPS 代理（全局）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># HTTP 代理</span><br>git config --global http.proxy http://127.0.0.1:10808<br><br><span class="hljs-comment"># HTTPS 也走同一个代理（通常只需设 http.proxy，Git 会自动用于 HTTPS）</span><br>git config --global https.proxy http://127.0.0.1:10808<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>💡 大多数情况下，<strong>只设置 <code>http.proxy</code> 即可</strong>，因为 Git 的 HTTPS 流量也通过 HTTP CONNECT 隧道传输。</p>
-</blockquote>
-<h3 id="2-设置-SOCKS5-代理（如-Clash、V2Ray）"><a href="#2-设置-SOCKS5-代理（如-Clash、V2Ray）" class="headerlink" title="2. 设置 SOCKS5 代理（如 Clash、V2Ray）"></a>2. 设置 SOCKS5 代理（如 Clash、V2Ray）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global http.proxy socks5://127.0.0.1:10808<br><span class="hljs-comment"># 或 DNS 在代理端解析（推荐）：</span><br>git config --global http.proxy socks5h://127.0.0.1:10808<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>🔹 <code>socks5://</code>：本地解析域名（可能泄露 DNS）<br>🔹 <code>socks5h://</code>：远程解析域名（更安全，防止 DNS 污染）</p>
-</blockquote>
-<h3 id="3-查看当前-Git-代理配置："><a href="#3-查看当前-Git-代理配置：" class="headerlink" title="3. 查看当前 Git 代理配置："></a>3. 查看当前 Git 代理配置：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global --get http.proxy<br>git config --global --get https.proxy<br></code></pre></td></tr></table></figure>
-
-<h3 id="4-取消代理："><a href="#4-取消代理：" class="headerlink" title="4. 取消代理："></a>4. 取消代理：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.proxy<br>git config --global --<span class="hljs-built_in">unset</span> https.proxy<br></code></pre></td></tr></table></figure>
-
-
+                <h2 id="CF优选"><a href="#CF优选" class="headerlink" title="CF优选"></a>CF优选</h2><p><a target="_blank" rel="noopener" href="https://vps.la/2025/02/19/%e3%80%90%e5%8a%a0%e9%80%9f%e7%bd%91%e7%ab%99%e3%80%91%e5%88%86%e4%ba%ab%e5%87%a0%e4%b8%aa%e6%88%91%e5%9c%a8%e7%94%a8%e7%9a%84cloudflare%e4%bc%98%e9%80%89ip%e5%8f%8a%e7%ad%9b%e9%80%89%e6%96%b9/">【加速网站】分享几个我在用的CloudFlare优选IP及筛选方案 - VPS啦</a><br><a target="_blank" rel="noopener" href="https://cf.090227.xyz/">https://cf.090227.xyz/</a><br><a target="_blank" rel="noopener" href="https://vps789.com/cfip/?remarks=domain">https://vps789.com/cfip/?remarks=domain</a><br><a target="_blank" rel="noopener" href="https://ipdb.api.030101.xyz/">https://ipdb.api.030101.xyz/</a><br><a target="_blank" rel="noopener" href="https://www.wetest.vip/page/cloudflare/address_v4.html">https://www.wetest.vip/page/cloudflare/address_v4.html</a><br><a target="_blank" rel="noopener" href="https://stock.hostmonit.com/CloudFlareYes">https://stock.hostmonit.com/CloudFlareYes</a><br><a target="_blank" rel="noopener" href="https://blog.qmsdh.com/index.php/archives/22/">CF优选域名-持续更新 - 秋名山博客</a><br><a target="_blank" rel="noopener" href="https://blog.cmliussss.com/p/cfnat/#CFnat-Windows-GUI">https://blog.cmliussss.com/p/cfnat/#CFnat-Windows-GUI</a><br><a target="_blank" rel="noopener" href="https://www.baota.me/post-433.html">https://www.baota.me/post-433.html</a><br><a target="_blank" rel="noopener" href="https://www.qsesvick.top/archives/cloudflare_select_ip/207?i=2">https://www.qsesvick.top/archives/cloudflare_select_ip/207?i=2</a><br><a target="_blank" rel="noopener" href="https://blog.2b2x.cn/posts/record/">记录 - AcoFork Blog</a></p>
+<h2 id="学生权益"><a href="#学生权益" class="headerlink" title="学生权益"></a>学生权益</h2><p><a target="_blank" rel="noopener" href="https://blog.zeruns.com/archives/321.html">学生优惠权益大全 - Zeruns’s Blog</a><br><a target="_blank" rel="noopener" href="https://blog.2b2x.cn/posts/github-edu/">Github新版学生认证怎么过？用记事本！ - AcoFork Blog</a></p>
+<h2 id="IP检测"><a href="#IP检测" class="headerlink" title="IP检测"></a>IP检测</h2><p><a target="_blank" rel="noopener" href="https://www.vps234.com/ipchecker/">IPChecker检查IP是否被封的利器 - VPS234主机测评</a><br><a target="_blank" rel="noopener" href="https://ping.pe/">Ping, mtr, dig, TCP port check and real time BGP looking glass from multiple locations</a></p>
+<h2 id="BBR"><a href="#BBR" class="headerlink" title="BBR"></a>BBR</h2><p><a target="_blank" rel="noopener" href="https://vpszhijia.com/bbr-jiasu-chaxun">什么是BBR？怎么开启BBR加速？ - VPS之家</a></p>
+<h2 id="SAAS回源"><a href="#SAAS回源" class="headerlink" title="SAAS回源"></a>SAAS回源</h2><p><a target="_blank" rel="noopener" href="https://www.baota.me/post-413.html">https://www.baota.me/post-413.html</a><br><a target="_blank" rel="noopener" href="https://blog.uuanqin.top/p/55893d1/">https://blog.uuanqin.top/p/55893d1/</a><br><a target="_blank" rel="noopener" href="https://www.silverdragon.cn/archives/7484/">https://www.silverdragon.cn/archives/7484/</a><br><a target="_blank" rel="noopener" href="https://zhichao.org/posts/416c7d">https://zhichao.org/posts/416c7d</a><br><a target="_blank" rel="noopener" href="https://www.cheshirex.com/8144.html">https://www.cheshirex.com/8144.html</a><br><a target="_blank" rel="noopener" href="https://www.qsesvick.top/archives/cloudflare-saas/232?i=1">https://www.qsesvick.top/archives/cloudflare-saas/232?i=1</a></p>
+<h2 id="blog"><a href="#blog" class="headerlink" title="blog"></a>blog</h2><p><a target="_blank" rel="noopener" href="https://imbee.top/">MiFengの主页</a><br><a target="_blank" rel="noopener" href="https://www.fis.ink/">fishcpy - home</a></p>
 
                 
               </div>
@@ -319,8 +310,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Git设置代理</div>
-      <div>https://xiaokcoding.top/2025/11/22/Git设置代理/</div>
+      <div>CF优选</div>
+      <div>https://xiaokcoding.top/2025/11/28/备忘/</div>
     </div>
     <div class="license-meta">
       
@@ -332,7 +323,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年11月22日</div>
+          <div>2025年11月28日</div>
         </div>
       
       
@@ -364,18 +355,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/11/28/%E5%A4%87%E5%BF%98/" title="CF优选">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CF优选</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/11/22/curl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="curl常用命令">
-                        <span class="hidden-mobile">curl常用命令</span>
+                      <a href="/2025/11/22/Git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/" title="Git设置代理">
+                        <span class="hidden-mobile">Git设置代理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
