@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Windows | xiaokcoding</title><meta name="author" content="xiaokcoding"><meta name="copyright" content="xiaokcoding"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="禁止MySQL开机自动启动的方法 - Rogn - 博客园 跳过网络：按下 shift + F10，输入oobe\bypassnro edge浏览器同步问题：设置——&gt;关于 Microsoft Edge，更新重启浏览器就好了 笔记本原装win11家庭版升级专业版：BCQNW-3VWYB-4V7QD-M6R2B-7MH26 如何在 Windows 11 中永久关闭 Microsoft Defe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows">
+<meta property="og:url" content="https://blog.xiaokcoding.top/posts/2c5abc07/index.html">
+<meta property="og:site_name" content="xiaokcoding">
+<meta property="og:description" content="禁止MySQL开机自动启动的方法 - Rogn - 博客园 跳过网络：按下 shift + F10，输入oobe\bypassnro edge浏览器同步问题：设置——&gt;关于 Microsoft Edge，更新重启浏览器就好了 笔记本原装win11家庭版升级专业版：BCQNW-3VWYB-4V7QD-M6R2B-7MH26 如何在 Windows 11 中永久关闭 Microsoft Defe">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.xiaokcoding.top/img/butterfly-icon.png">
+<meta property="article:published_time" content="2025-12-06T13:40:47.000Z">
+<meta property="article:modified_time" content="2025-12-06T13:44:57.440Z">
+<meta property="article:author" content="xiaokcoding">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.xiaokcoding.top/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Windows",
+  "url": "https://blog.xiaokcoding.top/posts/2c5abc07/",
+  "image": "https://blog.xiaokcoding.top/img/butterfly-icon.png",
+  "datePublished": "2025-12-06T13:40:47.000Z",
+  "dateModified": "2025-12-06T13:44:57.440Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "xiaokcoding",
+      "url": "https://blog.xiaokcoding.top"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.xiaokcoding.top/posts/2c5abc07/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Windows',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">xiaokcoding</span></a><a class="nav-page-title" href="/"><span class="site-name">Windows</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">Windows</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-12-06T13:40:47.000Z" title="发表于 2025-12-06 21:40:47">2025-12-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-12-06T13:44:57.440Z" title="更新于 2025-12-06 21:44:57">2025-12-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.cnblogs.com/lfri/p/10885015.html">禁止MySQL开机自动启动的方法 - Rogn - 博客园</a></p>
+<p>跳过网络：按下 <code>shift + F10</code>，输入<code>oobe\bypassnro</code></p>
+<p><code>edge</code>浏览器同步问题：设置——&gt;关于 <code>Microsoft Edge</code>，更新重启浏览器就好了</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/682273555">笔记本原装win11家庭版升级专业版</a>：<code>BCQNW-3VWYB-4V7QD-M6R2B-7MH26</code></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1TTcBe2E9t/">如何在 Windows 11 中永久关闭 Microsoft Defender 防病毒软件</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://otp.landian.vip/zh-cn/">Office Tool Plus</a>：<code>kms.03k.org</code></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/677037205">关于电脑故障-windows无法访问指定设备、路径或文件。你可能没有适当的权限访问该项目</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/amazingcoderpro/TyproaCrack/tree/main#">TyproaCrack Typora 破解版</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/430383035">vscode关闭受限模式（工作区信任）</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/441444449">win10&#x2F;win11怎么显示此电脑&#x2F;我的电脑图标？</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/opus/786623848903606337">屏蔽B站首页提示：检测到您的页面展示可能受到浏览器插件影响，建议您将当前页面加入</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/xl132598798/article/details/107375415">设置谷歌浏览器打开链接自动跳转到新窗口而不是覆盖当前窗口</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/zengliguang/article/details/136666259">windows操作系统生成密钥对，并配置免密登录</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/667236864">VSCode配置 SSH连接远程服务器+免密连接教程</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cloud.tencent.com/developer/ask/sof/108008180">我已经设置了ssh密钥，但是VSCode一直在询问密码</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/222452460">配置vscode 远程开发+ 免密登录</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/585055161">【Microsoft Edge】“由你的组织管理”如何解决？</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/616424904">https://zhuanlan.zhihu.com/p/616424904</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://stackoverflow.com/questions/73164581/why-the-1-69-2-vscode-server-has-so-high-cpu-usage-50">为什么 1.69.2 vscode 服务器 CPU 使用率这么高（&gt;50%）？</a>: <code>rm -rf ~/.vscode-server</code></p>
+<p>未将所有数据都成功写入到注册表中。某些项是由系统或其他进程打开的，或者你没有足够的权 限执行此操作。–&gt;<strong>PE启动盘引导</strong></p>
+<p>🤣【下载】目录特有的自动分组问题，老早在win10就有了</p>
+<p>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderTypes{885a186e-a440-4ada-812b-db871b942259}\TopViews{00000000-0000-0000-0000-000000000000}</p>
+<p>GroupBy(分组)</p>
+<p>默认 System.DateModified 改为 System.Null</p>
+<p>SortByList(排序) 默认 prop:System.DateModified 改为 prop:System.ItemNameDisplay</p>
+<p>顺带一提先对注册表–{00000000-0000-0000-0000-000000000000}文件夹，右键–【权限】进行修改</p>
+<p>右键点击该项 → 权限 → 高级 点击 所有者 右侧的 更改。 输入你的用户名（或 Administrators），点击 检查名称 确认 → 确定。 勾选 替换子容器和对象的所有者 → 应用 → 确定。</p>
+<p>赋予完全控制权限 回到 权限 窗口，选中你的用户或组（如 Administrators）。 勾选 完全控制 → 应用 → 确定。</p>
+<p>iex(irm is.gd&#x2F;idm_reset)</p>
+<p>irm <a target="_blank" rel="noopener external nofollow noreferrer" href="https://get.activated.win/">https://get.activated.win</a> | iex</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.binbinbiji.com/windows/3230.html">https://www.binbinbiji.com/windows/3230.html</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.binbinbiji.com/windows/3507.html">https://www.binbinbiji.com/windows/3507.html</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.xiaokcoding.top">xiaokcoding</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.xiaokcoding.top/posts/2c5abc07/">https://blog.xiaokcoding.top/posts/2c5abc07/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog.xiaokcoding.top" target="_blank">xiaokcoding</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/39ed95a4/" title="Git实用命令合集"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Git实用命令合集</div></div><div class="info-2"><div class="info-item-1">基础操作1234567891011121314151617# 初始化 Git 仓库git init# 查看当前仓库状态git status# 添加所有文件到暂存区git add .# 添加指定文件git add 文件名# 提交修改git commit -m &quot;提交说明&quot;# 修改上一次提交信息git commit --amend -m &quot;新的提交说明&quot;   远程仓库相关1234567891011# 添加远程仓库git remote add origin 仓库地址# 查看远程仓库git remote -v# 修改远程仓库地址git remote set-url origin 新地址# 删除远程仓库git remote remove origin   推送与拉取1234567891011121314# 推送到远程仓库git push origin 分支名# 强制推送（危险！会覆盖远程）git push -f origin 分支名# 从远程拉取并自动合并git pull# 拉取指定分支git pull origin main# 只获取更新但不合并g...</div></div></div></a><a class="pagination-related" href="/posts/b3be37c1/" title="Codex"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Codex</div></div><div class="info-2"><div class="info-item-1">Codex CLI 完整指南 - 安装配置与常用命令速查表(7 封私信 &#x2F; 22 条消息) 2025年国内使用 Codex &amp; Codex CLI 教程 - 详细步骤指南 - 知乎 </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">xiaokcoding</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/d2e7cd20/" title="GitHub Pages 域名解析与 blog 跳转（Cloudflare 版）">GitHub Pages 域名解析与 blog 跳转（Cloudflare 版）</a><time datetime="2025-12-09T10:26:04.000Z" title="发表于 2025-12-09 18:26:04">2025-12-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/39ed95a4/" title="Git实用命令合集">Git实用命令合集</a><time datetime="2025-12-09T06:02:35.000Z" title="发表于 2025-12-09 14:02:35">2025-12-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/2c5abc07/" title="Windows">Windows</a><time datetime="2025-12-06T13:40:47.000Z" title="发表于 2025-12-06 21:40:47">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/b3be37c1/" title="Codex">Codex</a><time datetime="2025-12-06T13:39:26.000Z" title="发表于 2025-12-06 21:39:26">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/741cc87a/" title="Debian">Debian</a><time datetime="2025-12-03T11:27:51.000Z" title="发表于 2025-12-03 19:27:51">2025-12-03</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By xiaokcoding</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><div class="js-pjax"></div><script async data-pjax src="/"></script></div></body></html>
