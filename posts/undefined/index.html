@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Cloud | xiaokcoding</title><meta name="author" content="xiaokcoding"><meta name="copyright" content="xiaokcoding"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="PicGo S3插件配置1自定义输出URL模板&#x3D;WebP Cloud的代理地址&#x2F;&#123;path&#125;  图床迁移使用obsidian的插件 Local images 把 aliyun 图床的图片全部下载到本地   小坑，下载完图片会全放在根目录下的 media 文件夹，像子目录的图片还是路径还是 media&#x2F;……，在 typora，vscode 等软件显示不出来，需要把 media 文">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cloud">
+<meta property="og:url" content="https://blog.xiaokcoding.top/posts/undefined/index.html">
+<meta property="og:site_name" content="xiaokcoding">
+<meta property="og:description" content="PicGo S3插件配置1自定义输出URL模板&#x3D;WebP Cloud的代理地址&#x2F;&#123;path&#125;  图床迁移使用obsidian的插件 Local images 把 aliyun 图床的图片全部下载到本地   小坑，下载完图片会全放在根目录下的 media 文件夹，像子目录的图片还是路径还是 media&#x2F;……，在 typora，vscode 等软件显示不出来，需要把 media 文">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.xiaokcoding.top/img/butterfly-icon.png">
+<meta property="article:published_time" content="2025-12-20T15:27:38.000Z">
+<meta property="article:modified_time" content="2025-12-21T03:34:39.649Z">
+<meta property="article:author" content="xiaokcoding">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.xiaokcoding.top/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.xiaokcoding.top/posts/undefined/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Cloud',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: '图床方案：cloudflare R2 + PicGo + WebP Cloud'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">xiaokcoding</span></a></span><div id="menus"></div></nav><div id="page-site-info"><h1 id="site-title">Cloud</h1></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="PicGo-S3插件配置"><a href="#PicGo-S3插件配置" class="headerlink" title="PicGo S3插件配置"></a>PicGo S3插件配置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">自定义输出URL模板=WebP Cloud的代理地址/&#123;path&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="图床迁移"><a href="#图床迁移" class="headerlink" title="图床迁移"></a>图床迁移</h2><p><strong>使用<code>obsidian</code>的插件 <code>Local images</code> 把 <code>aliyun</code> 图床的图片全部下载到本地</strong></p>
+<p><img src="https://571dff4.webp.li/20251221112348456.png" alt="image-20251221112348369"></p>
+<p><img src="https://571dff4.webp.li/20251221112450272.png" alt="image-20251221112450231"></p>
+<p><strong>小坑，下载完图片会全放在根目录下的 <code>media</code> 文件夹，像子目录的图片还是路径还是 <code>media/……</code>，在 <code>typora，vscode</code> 等软件显示不出来，需要把 <code>media</code> 文件夹复制到子目录，比如下图中的 <code>Liunx</code> 目录</strong></p>
+<p><img src="https://571dff4.webp.li/20251221112641792.png" alt="image-20251221112641682"></p>
+<p><strong>在 <code>typora</code> 中设置好，然后点击 “验证图片上传选项” 验证</strong></p>
+<p><img src="https://571dff4.webp.li/20251221113043044.png" alt="image-20251221113042977"></p>
+<p><strong>最后就可以愉快的上传图片了，但是只能上传选中的一篇文章，不能批量上传</strong></p>
+<p><img src="https://571dff4.webp.li/20251221113240147.png" alt="image-20251221113240043"></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.zrf.me/p/Notes-CloudflareR2-PicGo/">打造个人图床神器：免费稳定，Cloudflare R2 + PicGo + WebP Cloud，全球畅通无阻！</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.pseudoyu.com/zh/2024/06/30/free_image_hosting_system_using_r2_webp_cloud_and_picgo">从零开始搭建你的免费图床系统（Cloudflare R2 + WebP Cloud）</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://xushiqing.xyz/2025/09/13/setting-up-picgo-with-R2-bucket/">使用 PicGo 配合 Cloudflare R2 优化博客图片上传体验</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.xiaokcoding.top">xiaokcoding</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.xiaokcoding.top/posts/undefined/">https://blog.xiaokcoding.top/posts/undefined/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog.xiaokcoding.top" target="_blank">xiaokcoding</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav id="pagination"><div class="pagination"></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">xiaokcoding</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/undefined/" title="Cloud">Cloud</a><time datetime="2025-12-20T15:27:38.000Z" title="发表于 2025-12-20 23:27:38">2025-12-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/87c56acd/" title="Thunderbird简单配置">Thunderbird简单配置</a><time datetime="2025-12-19T07:18:19.000Z" title="发表于 2025-12-19 15:18:19">2025-12-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/6fc55794/" title="常用命令">常用命令</a><time datetime="2025-12-13T09:14:39.000Z" title="发表于 2025-12-13 17:14:39">2025-12-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/d2e7cd20/" title="GitHub Pages 域名解析与 blog 跳转（Cloudflare 版）">GitHub Pages 域名解析与 blog 跳转（Cloudflare 版）</a><time datetime="2025-12-09T10:26:04.000Z" title="发表于 2025-12-09 18:26:04">2025-12-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/39ed95a4/" title="Git实用命令合集">Git实用命令合集</a><time datetime="2025-12-09T06:02:35.000Z" title="发表于 2025-12-09 14:02:35">2025-12-09</time></div></div></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              十二月 2025
+            </span>
+            <span class="card-archive-list-count">8</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">12</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-21T03:35:36.776Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By xiaokcoding</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><div class="js-pjax"></div><script async data-pjax src="/"></script></div></body></html>
