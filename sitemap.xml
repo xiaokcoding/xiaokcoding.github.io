@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.xiaokcoding.top/posts/d1997a35/</loc>
+    <loc>https://blog.xiaokcoding.top/posts/16f59090/</loc>
     
     <lastmod>2026-01-19</lastmod>
     
@@ -12,6 +12,24 @@
   
   <url>
     <loc>https://blog.xiaokcoding.top/posts/30c2270c/</loc>
+    
+    <lastmod>2026-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xiaokcoding.top/posts/d1997a35/</loc>
+    
+    <lastmod>2026-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xiaokcoding.top/posts/b9e17321/</loc>
     
     <lastmod>2026-01-19</lastmod>
     
